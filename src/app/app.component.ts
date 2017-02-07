@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import {ToDoListComponent} from './lists/lists.component';
+import {ListService} from 'listService.js';
 
 @Component({
   selector: 'app-root',
-  templateUrl: "todo/todo.component.html",
-  styleUrls: ['./app.component.css']
+  templateUrl: 'lists/lists.component.html',
+  styleUrls: ['app.component.css'],
+  directives: [ToDoListComponent],
+  providers: [ListService]
 })
-export class AppComponent {
-  title = 'app works! auto save';
-}
+export class AppComponent {}
